@@ -1,4 +1,4 @@
-presentHour = moment().format(H);
+presentHour = moment().format(HH);
 hourString = $(this).siblings("div").text();
 
 // save text of hours divs as numerical value
