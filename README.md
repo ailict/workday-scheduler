@@ -8,5 +8,5 @@ The github link for this repository is: https://github.com/ailict/workday-schedu
 
 This website is deployed live at: https://ailict.github.io/workday-scheduler/
 
-Screenshots of deployed application:
-
+Screenshot of deployed application:
+<img src="./assets/images/workdayimage.png">
