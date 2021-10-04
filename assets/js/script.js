@@ -1,20 +1,24 @@
 presentHour = moment().format(H);
 
+// function identifies time box from HTML id, compares present hour to hour of time box, should color code appropriately
 function colorCoding () {
     let counter = 1;
-    let timeNumber = hourNumberFromHourString(timeString);  
+    let textEntry = "#text-entry" + counter;
+    let timeNumber = hourNumber(hourString);  
         if(timeNumber < presentHour) {
         $(textEntry).addClass("past");
-        } else if (timeNumber > presentHour) {
+        } 
+        else if (timeNumber > presentHour) {
         $(textEntry).addClass("future");
-        } else {
+        } 
+        else {
         $(textEntry).addClass("present");
         }
   counter ++;
 }
 
 // save text of hours divs as numerical value
-function hourNumberFromHourString(hourString) {
+function hourNumber(hourString) {
     switch(hourString) {
       case "8 AM": return 8;
       case "9 AM": return 9;
