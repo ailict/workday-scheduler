@@ -16,7 +16,7 @@ function hourNumber(hourString) {
       case "5 PM": return 17;
     }
   }
-  
+
 // function identifies time box from HTML id, compares present hour to hour of time box, should color code appropriately
 function colorCoding () {
     let counter = 1;
@@ -37,24 +37,22 @@ function colorCoding () {
 // saveSchedule on save button click
 
 $("saveBtn").click(function() {
-    value = $(this).siblings("textarea").val();
-    hourString = $(this).siblings("div").text();
-    
+    value = $(this).siblings("textarea").val();    
     localStorage.setItem(hourString, value);
 });
 
 //retrieve values from local storage
 function loadSavedValues () {
-    $("#8 .textarea").val(localStorage.getItem("8"));
-    $("#9 .textarea").val(localStorage.getItem("9"));
-    $("#10 .textarea").val(localStorage.getItem("10"));
-    $("#11 .textarea").val(localStorage.getItem("11"));
-    $("#12 .textarea").val(localStorage.getItem("12"));
-    $("#13 .textarea").val(localStorage.getItem("13"));
-    $("#14 .textarea").val(localStorage.getItem("14"));
-    $("#15 .textarea").val(localStorage.getItem("15"));
-    $("#16 .textarea").val(localStorage.getItem("16"));
-    $("#17 .textarea").val(localStorage.getItem("17"));
+    $("#8 .textarea").val(localStorage.getItem("8 AM"));
+    $("#9 .textarea").val(localStorage.getItem("9 AM"));
+    $("#10 .textarea").val(localStorage.getItem("10 AM"));
+    $("#11 .textarea").val(localStorage.getItem("11 AM"));
+    $("#12 .textarea").val(localStorage.getItem("12 PM"));
+    $("#13 .textarea").val(localStorage.getItem("1 PM"));
+    $("#14 .textarea").val(localStorage.getItem("2 PM"));
+    $("#15 .textarea").val(localStorage.getItem("3 PM"));
+    $("#16 .textarea").val(localStorage.getItem("4 PM"));
+    $("#17 .textarea").val(localStorage.getItem("5 PM"));
     };
 
 loadSavedValues();
