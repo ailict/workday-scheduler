@@ -1,3 +1,18 @@
+presentHour = moment().format(H);
+
+function colorCoding () {
+    let counter = 1;
+    let timeNumber = hourNumberFromHourString(timeString);  
+        if(timeNumber < presentHour) {
+        $(textEntry).addClass("past");
+        } else if (timeNumber > presentHour) {
+        $(textEntry).addClass("future");
+        } else {
+        $(textEntry).addClass("present");
+        }
+  counter ++;
+}
+
 // save text of hours divs as numerical value
 function hourNumberFromHourString(hourString) {
     switch(hourString) {
