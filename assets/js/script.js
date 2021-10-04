@@ -15,21 +15,20 @@ function hourNumber(hourString) {
       case "4 PM": return 16;
       case "5 PM": return 17;
     }
-  }
+  };
 
 // function identifies time box from HTML id, compares present hour to hour of time box, should color code appropriately
 function colorCoding () {
     let counter = 1;
-    let textEntry = "#text-entry" + counter;
     let timeNumber = hourNumber(hourString);  
         if(timeNumber < presentHour) {
-        $(textEntry).addClass("past");
+        $(textarea).addClass("past");
         } 
         else if (timeNumber > presentHour) {
-        $(textEntry).addClass("future");
+        $(textarea).addClass("future");
         } 
         else {
-        $(textEntry).addClass("present");
+        $(textarea).addClass("present");
         }
   counter ++;
 };
@@ -55,4 +54,5 @@ function loadSavedValues () {
     $("#17 .textarea").val(localStorage.getItem("5 PM"));
     };
 
+colorCoding ();
 loadSavedValues();
